@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container {
+      position: relative;
+      text-align: center;
+      width: 100px;
+    }
+
+    .item {
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background: #969aec;
+      ;
+      animation: item 1s ease-in-out infinite;
+    }
+
+    .b {
+      animation-delay: .2s;
+    }
+
+    .c {
+      animation-delay: .4s;
+    }
+
+    @keyframes item {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      50% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item a"></div>
+    <div class="item b"></div>
+    <div class="item c"></div>
+  </div>
+</body>
+
+</html>

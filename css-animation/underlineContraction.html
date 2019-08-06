@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .underline {
+      display: inline-block;
+      position: relative;
+      line-height: 2;
+      /*这里设置line-height是为了让下横线不要太贴着文字了。。*/
+    }
+
+    .underline::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transform: scaleX(0);
+      /*设置x方向缩放*/
+      height: 2px;
+      width: 100%;
+      transform-origin: 50% bottom;
+      /*这里呢，从左到右，从上到下*/
+      background: #1395ba;
+      transition: transform 1s;
+    }
+
+    .underline:hover::after {
+      transform: scaleX(1);
+      transition: transform 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="underline">我是小娩娩</p>
+</body>
+
+</html>
