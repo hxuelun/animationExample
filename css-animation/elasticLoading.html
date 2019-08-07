@@ -7,9 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-    .container {
+    /* 第一个动画样式 */
+    .container1 {
       position: relative;
       text-align: center;
+      margin: 100px auto;
       width: 100px;
     }
 
@@ -19,7 +21,6 @@
       width: 15px;
       border-radius: 50%;
       background: #969aec;
-      ;
       animation: item 1s ease-in-out infinite;
     }
 
@@ -47,14 +48,93 @@
         opacity: 1;
       }
     }
+
+    /* 第二个动画样式 */
+    .container2{
+ 
+    }
+    .dot{
+      margin: 100px auto;
+      width: 15px;
+      height: 15px;
+      background: #969aec;
+      border-radius: 50%;
+      animation: dotloading 0.4s ease-out infinite;
+    }
+    @keyframes dotloading{
+      0%{
+        transform: scale3d(1,1,1)
+      }
+      50%{
+        transform: scale3d(0.5,0.5,0.5)
+      }
+      100%{
+        transform: scale3d(1,1,1)
+      }
+    }
+    /* 第三个动画 */
+    .container3{
+      text-align: center;
+      font-size: 0;
+    }
+    .bounce1,.bounce2{
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #969aec;
+      display: inline-block;
+      animation: bounce2 2s ease-in infinite; 
+    }
+    .bounce1{
+
+    }
+    .bounce2{
+      background: #1e27e0;
+      margin-left: -15px;
+      animation-delay: -1.0s;
+      -webkit-animation-delay: -1.0s;
+    }
+    @keyframes bounce1{
+      0%{
+        transform: scale3d(1,1,1)
+      }
+      50%{
+        transform: scale3d(0,0,0)
+      }
+      100%{
+        transform: scale3d(1,1,1)
+      }
+    }
+    @keyframes bounce2{
+      0%{
+        transform: scale3d(0,0,0);
+      }
+      50%{
+        transform: scale3d(0.8,0.8,0.8)
+      }
+      100%{
+        transform: scale3d(0,0,0);
+      }
+    }
+
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <!-- 第一个动画 -->
+  <div class="container1">
     <div class="item a"></div>
     <div class="item b"></div>
     <div class="item c"></div>
+  </div>
+  <!-- 第二个动画 -->
+  <div class="container2">
+    <div class="dot"></div>
+  </div>
+  <!-- 第三个动画 -->
+  <div class="container3">
+    <div class="bounce1"></div>
+    <div class="bounce2"></div>
   </div>
 </body>
 
